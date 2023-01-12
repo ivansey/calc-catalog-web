@@ -15,6 +15,7 @@ const IndexPage = () => {
 				<Link>Информатика</Link>
 			</Card>
 			<Card>
+				<Link onClick={() => navigate("/setting")}>Настройки</Link>
 				<Link onClick={() => navigate("/about")}>О приложении</Link>
 			</Card>
 		</div>

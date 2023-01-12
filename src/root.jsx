@@ -12,6 +12,10 @@ import AppPage from "./App.jsx";
 import IndexPage from "./pages/Index.jsx";
 import AboutPage from "./pages/About.jsx";
 import AboutModulePage from "./pages/AboutModule.jsx";
+import {
+	UserSettingPage,
+	UserSettingCurrencyPage,
+} from "./pages/UserSetting.jsx";
 
 import CalcFinancePage from "./pages/Calc/Finance/Index.jsx";
 import CreditMortgagePage from "./pages/Calc/Finance/CreditMortgage/CreditMortgage.jsx";
@@ -34,6 +38,15 @@ const router = createBrowserRouter([
 				path: "about/module",
 				element: <AboutModulePage/>,
 			},
+			{
+				path: "setting",
+				element: <UserSettingPage/>,
+			},
+			{
+				path: "setting/currency",
+				element: <UserSettingCurrencyPage/>,
+			},
+
 			{
 				path: "calc/finance",
 				element: <CalcFinancePage/>,
