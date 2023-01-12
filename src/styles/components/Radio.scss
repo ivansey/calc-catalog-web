@@ -1,0 +1,29 @@
+.radio {
+	background-color: #eee;
+	width: calc(100% - 20px);
+	padding: 10px;
+	border: 0;
+	border-bottom: 1px solid #999;
+	transition: background-color .3s;
+	display: flex;
+	justify-content: space-between;
+
+	&.firstChild {
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+
+	&.lastChild {
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+		border-bottom: 0;
+	}
+
+	& label {
+		width: 100%;
+	}
+}
+
+.radio-list {
+	
+}
