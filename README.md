@@ -38,6 +38,14 @@ The project is available at [http://localhost:8080/](http://localhost:8080/)
 
 * Project founder and JS-developer: [Ivan "IvanSEY" Panasyuk](https://github.com/ivansey)
 
+### License
+
+This project is GPTv3 licensed. The text of this license is located in the file COPYING
+
+Licenses of all dependencies are located in the DISCLAIMER.DEPENDENCIES
+
 ### Particiaption in the project
 
 To particiapte in the project, contact the project founder [Ivan "IvanSEY" Panasyuk](https://github.com/ivansey)
+
+Copyright 2023 Ivan "IvanSEY" Panasyuk
