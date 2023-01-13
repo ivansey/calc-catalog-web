@@ -1,14 +1,14 @@
 [
 	{
-		"name": "Рос. Рубль (стар.)",
+		"name": "ruRubleOld",
 		"currency": "RUB"
 	},
 	{
-		"name": "Рос. Рубль",
+		"name": "ruRuble",
 		"currency": "₽"
 	},
 	{
-		"name": "Амер. Доллар",
+		"name": "usDollar",
 		"currency": "$"
 	}
 ]

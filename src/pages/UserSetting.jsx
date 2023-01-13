@@ -1,11 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { changeCurrency, changeFormatMoney } from "../redux/userSetting.js";
-import {
-	useChangeTitle,
-	useCurrency,
-} from "../hooks/userSetting.js";
+import { changeCurrency, changeFormatMoney, changeLang } from "../redux/userSetting.js";
+import { useChangeTitle } from "../hooks/userSetting.js";
+import { useTranslation } from "react-i18next";
 import {
 	ValueLink,
 	Card,
@@ -15,32 +13,36 @@ import {
 
 import currencies from "../json/currency.json";
 import formatsMoney from "../json/formatMoney.json";
+import langs from "../json/lang.json";
 
 const UserSettingPage = () => {
-	useChangeTitle("Настройки");
+	const {t} = useTranslation();
+	useChangeTitle(t("setting"));
 	const navigate = useNavigate();
-	const { currency, formatMoney } = useSelector(state => state.userSetting);
+	const { currency, formatMoney, lang } = useSelector(state => state.userSetting);
 
 	return <div className="page">
 		<div className="content">
-			<ValueLink title="Валюта:" value={currency} onClick={() => navigate("/setting/currency")}/>
-			<ValueLink title="Денежный формат:" value={formatMoney.name} onClick={() => navigate("/setting/formatMoney")}/>
+			<ValueLink title={t("currency") + ":"} value={currency} onClick={() => navigate("/setting/currency")}/>
+			<ValueLink title={t("moneyFormat") + ":"} value={t(formatMoney.name)} onClick={() => navigate("/setting/formatMoney")}/>
+			<ValueLink title={t("language") + ":"} value={lang} onClick={() => navigate("/setting/lang")}/>
 		</div>
 	</div>
 };
 
 const UserSettingCurrencyPage = () => {
+	const { t } = useTranslation();
 	const dispatch = useDispatch();
-	useChangeTitle("Валюта");
+	useChangeTitle(t("currency"));
 	const { currency } = useSelector(state => state.userSetting);
 
 	return <div className="page">
 		<div className="content">
 			<Card>
-				<Text>Валюты:</Text>
+				<Text>{t("currencies")}:</Text>
 				{
 					currencies.map((curr, i) => {
-						return <Radio key={i} title={`${curr.name} (${curr.currency})`} value={curr.currency} checked={curr.currency === currency} onChange={() => {dispatch(changeCurrency(curr.currency))}}/>
+						return <Radio key={i} title={`${t(curr.name)} (${curr.currency})`} value={curr.currency} checked={curr.currency === currency} onChange={() => {dispatch(changeCurrency(curr.currency))}}/>
 					})
 				}
 			</Card>
@@ -49,18 +51,39 @@ const UserSettingCurrencyPage = () => {
 };
 
 const UserSettingFormatMoneyPage = () => {
+	const { t } = useTranslation();
 	const dispatch = useDispatch();
-	useChangeTitle("Денежный формат");
+	useChangeTitle(t("moneyFormat"));
 	const { name } = useSelector(state => state.userSetting.formatMoney);
 	const { currency } = useSelector(state => state.userSetting);
 
 	return <div className="page">
 		<div className="content">
 			<Card>
-				<Text>Денежные форматы: </Text>
+				<Text>{t("moneyFormats")}:</Text>
 				{
 					formatsMoney.map((form, i) => {
-						return <Radio key={i} title={form.name} value={form.name} checked={form.name === name} onChange={() => dispatch(changeFormatMoney({name: form.name, integerSeparator: form.integerSeparator, decimal: form.decimal, prefix: form.prefix.replace("$c", currency), suffix: form.suffix.replace("$c", currency)}))}/>
+						return <Radio key={i} title={t(form.name)} value={form.name} checked={form.name === name} onChange={() => dispatch(changeFormatMoney({name: form.name, integerSeparator: form.integerSeparator, decimal: form.decimal, prefix: form.prefix.replace("$c", currency), suffix: form.suffix.replace("$c", currency)}))}/>
+					})
+				}
+			</Card>
+		</div>
+	</div>
+};
+
+const UserSettingLangPage = () => {
+	const { t } = useTranslation();
+	const dispatch = useDispatch();
+	useChangeTitle(t("language"));
+	const { lang } = useSelector(state => state.userSetting);
+
+	return <div className="page">
+		<div className="content">
+			<Card>
+				<Text>{t("languages")}:</Text>
+				{
+					langs.map((l, i) => {
+						return <Radio key={i} title={`${l.name} (${l.code})`} value={l.code} checked={lang === l.code} onChange={() => { dispatch(changeLang(l.code))}}/>
 					})
 				}
 			</Card>
@@ -72,4 +95,5 @@ export {
 	UserSettingPage,
 	UserSettingCurrencyPage,
 	UserSettingFormatMoneyPage,
+	UserSettingLangPage,
 };

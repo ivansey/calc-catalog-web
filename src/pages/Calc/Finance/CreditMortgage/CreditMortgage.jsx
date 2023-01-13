@@ -3,17 +3,19 @@ import { useNavigate } from "react-router-dom";
 import { useChangeTitle, useCurrency } from "../../../../hooks/userSetting.js";
 import { Card, Text, Input, Value, Radio, Link } from "../../../../components/Index.jsx";
 import format from "format-number";
+import { useTranslation } from "react-i18next";
 
 const MODULE_INFO = {
-	name: "Credit Mortgage",
+	name: "calculationCredits",
 	version: "1.0.0a",
 	author: "IvanSEY",
 };
 
 const CreditMortgagePage = () => {
+	const { t } = useTranslation();
 	const navigate = useNavigate();
 	const currencyFormat = useCurrency();
-	useChangeTitle(MODULE_INFO.name);
+	useChangeTitle(t(MODULE_INFO.name));
 
 	const [type, setType] = useState("annuity");
 	const [sum, setSum] = useState(0);
@@ -113,30 +115,30 @@ const CreditMortgagePage = () => {
 	return <div className="page">
 		<div className="content">
 			<Card>
-				<Text>Тип выплаты по кредитному продукту:</Text>
-				<Radio firstChild title="Аннуитетный" value="annuity" checked={type === "annuity"} onChange={() => setType("annuity")}/>
-				<Radio lastChild title="Дифференцированный" value="differentiated" checked={type === "differentiated"} onChange={() => setType("differentiated")}/>
+				<Text>{t("typeOfLoanPayment")}:</Text>
+				<Radio firstChild title={t("annuity")} value="annuity" checked={type === "annuity"} onChange={() => setType("annuity")}/>
+				<Radio lastChild title={t("differentiated")} value="differentiated" checked={type === "differentiated"} onChange={() => setType("differentiated")}/>
 			</Card>
-			<Input title="Сумма кредитного продукта:" id="sum" placeholder="0" onChange={handleSum} type="text" inputmode="numeric"/>
-			<Input title="% годовых:" id="monthlyRate" placeholder="0" onChange={handleMonthlyRate} type="number"/>
-			<Input title="Срок (в месяцах):" id="months" placeholder="0" onChange={handleMonths} type="number"/>
+			<Input title={t("loanProductAmount") + ":"} id="sum" placeholder="0" onChange={handleSum} type="text" inputmode="numeric"/>
+			<Input title={t("percentagePerAnnum") + ":"} id="monthlyRate" placeholder="0" onChange={handleMonthlyRate} type="number"/>
+			<Input title={t("termInMonths") + ":"} id="months" placeholder="0" onChange={handleMonths} type="number"/>
 			{
 				!isNaN(parseFloat(monthlyPayment)) && isFinite(monthlyPayment) && monthlyPayment !== 0
-					? <Value title="Месячный платеж:" value={`${currencyFormat(monthlyPayment)}`}/>
+					? <Value title={t("monthlyPayment") + ":"} value={`${currencyFormat(monthlyPayment)}`}/>
 					: null
 			}
 			{
 				!isNaN(parseFloat(overpayment)) && isFinite(overpayment) && overpayment !== 0
-					? <Value title="Переплата:" value={`${currencyFormat(overpayment)}`}/>
+					? <Value title={t("overpayment") + ":"} value={`${currencyFormat(overpayment)}`}/>
 					: null
 			}
 			{
 				arrayPays.length !== 0
-					? <Card><Link onClick={() => navigate("/calc/finance/creditMortgage/listPays", { state: { arrayPays: arrayPays } })}>Список платежей по месяцам</Link></Card>
+					? <Card><Link onClick={() => navigate("/calc/finance/creditMortgage/listPays", { state: { arrayPays: arrayPays } })}>{t("listOfPaymentsByMonth")}</Link></Card>
 					: null
 			}
 			<Card>
-				<Link onClick={() => navigate("/about/module", { state: MODULE_INFO })}>Информация о модуле</Link>
+				<Link onClick={() => navigate("/about/module", { state: MODULE_INFO })}>{t("aboutModule")}</Link>
 			</Card>
 		</div>
 	</div>

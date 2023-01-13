@@ -4,13 +4,14 @@ export const userSettingSlice = createSlice({
 	name: "userSetting",
 	initialState: {
 		formatMoney: {
-			name: "Русский формат",
+			name: "ruMoneyFormat",
 			integerSeparator: " ",
 			decimal: ",",
 			prefix: "",
 			suffix: " RUB",
 		},
 		currency: "RUB",
+		lang: "ru-RU",
 		title: "Calc Catalog Web",
 	},
 	reducers: {
@@ -23,6 +24,9 @@ export const userSettingSlice = createSlice({
 		changeFormatMoney: (state, action) => {
 			state.formatMoney = action.payload;
 		},
+		changeLang: (state, action) => {
+			state.lang = action.payload;
+		},
 		changeTitle: (state, action) => {
 			state.title = action.payload;
 			document.title = action.payload;
@@ -33,6 +37,7 @@ export const userSettingSlice = createSlice({
 export const { 
 	changeCurrency,
 	changeFormatMoney,
+	changeLang,
 	changeTitle,
 } = userSettingSlice.actions;
 

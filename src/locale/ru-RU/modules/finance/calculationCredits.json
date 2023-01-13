@@ -1,0 +1,16 @@
+{
+	"calculationCredits": "Расчет кредита",
+	"typeOfLoanPayment": "Тип расчета по кредитному продукту",
+	"annuity": "Аннуитетный",
+	"differentiated": "Дифферинцальный",
+	"loanProductAmount": "Сумма кредитного продукта",
+	"percentagePerAnnum": "Процент годовых",
+	"termInMonths": "Срок (в месяцах)",
+	"monthlyPayment": "Месячный платеж",
+	"overpayment": "Переплата",
+	"listOfPaymentsByMonth": "Список платежей по месяцам",
+	"listPays": "Список платежей",
+	"month": "Месяц",
+	"mainCreditPart": "Основная/Кредитная часть",
+	"remainder": "Остаток"
+}

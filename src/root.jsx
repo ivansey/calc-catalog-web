@@ -16,6 +16,7 @@ import {
 	UserSettingPage,
 	UserSettingCurrencyPage,
 	UserSettingFormatMoneyPage,
+	UserSettingLangPage,
 } from "./pages/UserSetting.jsx";
 
 import CalcFinancePage from "./pages/Calc/Finance/Index.jsx";
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
 			{
 				path: "setting/formatMoney",
 				element: <UserSettingFormatMoneyPage/>,
+			},
+			{
+				path: "setting/lang",
+				element: <UserSettingLangPage/>,
 			},
 
 			{

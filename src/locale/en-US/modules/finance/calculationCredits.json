@@ -1,0 +1,16 @@
+{
+	"calculationCredits": "Calculation credits",
+	"typeOfLoanPayment": "Type of loan payment",
+	"annuity": "Annuity",
+	"differentiated": "Differentiated",
+	"loanProductAmount": "Loan product amount",
+	"percentagePerAnnum": "Precentage per annum",
+	"termInMonths": "Term (in months)",
+	"monthlyPayment": "Monthly payment",
+	"overpayment": "Overpayment",
+	"listOfPaymentsByMonth": "List of payments by month",
+	"listPays": "List of payments",
+	"month": "Month",
+	"mainCreditPart": "Main/Credit part",
+	"remainder": "Remainder"
+}

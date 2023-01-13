@@ -1,13 +1,13 @@
 [
 	{
-		"name": "Русский формат",
+		"name": "ruMoneyFormat",
 		"integerSeparator": " ",
 		"decimal": ",",
 		"prefix": "",
 		"suffix": " $c"
 	},
 	{
-		"name": "Американский формат",
+		"name": "usMoneyFormat",
 		"integerSeparator": ",",
 		"decimal": ".",
 		"prefix": "$c",

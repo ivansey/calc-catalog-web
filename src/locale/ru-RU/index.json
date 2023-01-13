@@ -1,0 +1,14 @@
+{
+	"aboutApp": "О приложении",
+	"aboutApp/title": "Информация о {{app}}",
+	"aboutModule": "Информация о модуле",
+	"aboutModule/title": "Информация",
+	"nameModule": "Название модуля",
+	"version": "Версия",
+	"author": "Автор",
+	"technologiesUsed": "Используемые технологии",
+
+	"finance": "Финансы",
+	"physics": "Физика",
+	"computerScience": "Информатика"
+}

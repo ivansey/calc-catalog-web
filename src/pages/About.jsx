@@ -1,16 +1,18 @@
 import React from "react";
 import { Value, Card, Text } from "../components/Index.jsx";
 import { useChangeTitle } from "../hooks/userSetting.js";
+import { useTranslation } from "react-i18next";
 
 const AboutPage = () => {
-	useChangeTitle("Информация о Calc Catalog Web");
+	const { t } = useTranslation();
+	useChangeTitle(t("aboutApp/title", { app: "Calc Catalog Web" }));
 
 	return <div className="page">
 		<div className="content">
-			<Value title="Версия:" value="1.0.0a"/>
-			<Value title="Автор:" value="IvanSEY"/>
+			<Value title={t("version") + ":"} value="1.0.0a"/>
+			<Value title={t("author") + ":"} value="IvanSEY"/>
 			<Card>
-				<Text>Используемые технологии:</Text>
+				<Text>{t("technologiesUsed") + ":"}</Text>
 				<Text>React (with hooks)</Text>
 				<Text>Redux</Text>
 			</Card>

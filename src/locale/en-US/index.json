@@ -1,0 +1,14 @@
+{
+	"aboutApp": "About the application",
+	"aboutApp/title": "Information about {{app}}",
+	"aboutModule": "About the module",
+	"aboutModule/title": "Information about module",
+	"version": "Version",
+	"author": "Author",
+	"technologiesUsed": "Technologies used",
+	"nameModule": "Name module",
+
+	"finance": "Finance",
+	"physics": "Physics",
+	"computerScience": "Computer science"
+}
