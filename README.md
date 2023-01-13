@@ -17,16 +17,16 @@ Node.js >= 18.2
 ### Instalation
 
 1. Clone this repository and open folder:
-    git clone https://github.com/ivansey/calc-catalog-web
-    cd calc-catalog-web
+> git clone https://github.com/ivansey/calc-catalog-web
+> cd calc-catalog-web
 
 2. Install all dependencies^
-    npm install
+> npm install
 or
-    yarn install
+> yarn install
 
 3. Start dev server:
-    npm start
+> npm start
 
 The project is available at [http://localhost:8080/](http://localhost:8080/)
 
