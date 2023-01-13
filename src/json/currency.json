@@ -1,17 +1,14 @@
 [
 	{
 		"name": "Рос. Рубль (стар.)",
-		"prefix": "",
-		"suffix": " RUB"
+		"currency": "RUB"
 	},
 	{
 		"name": "Рос. Рубль",
-		"prefix": "",
-		"suffix": " ₽"
+		"currency": "₽"
 	},
 	{
 		"name": "Амер. Доллар",
-		"prefix": "$",
-		"suffix": ""
+		"currency": "$"
 	}
 ]

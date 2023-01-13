@@ -12,8 +12,8 @@ const useChangeTitle = (title) => {
 };
 
 const useCurrency = () => {
-	const { prefix, suffix } = useSelector(state => state.userSetting.currency);
-	const currencyFormat = format({prefix, suffix, integerSeparator: " ", decimal: ",", round: 2});
+	const { prefix, suffix, integerSeparator, decimal } = useSelector(state => state.userSetting.formatMoney);
+	const currencyFormat = format({prefix, suffix, integerSeparator, decimal, round: 2});
 	return currencyFormat;
 };
 

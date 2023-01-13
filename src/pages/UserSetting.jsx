@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { changeCurrency } from "../redux/userSetting.js";
+import { useDispatch, useSelector } from "react-redux";
+import { changeCurrency, changeFormatMoney } from "../redux/userSetting.js";
 import {
 	useChangeTitle,
 	useCurrency,
@@ -14,15 +14,17 @@ import {
 } from "../components/Index.jsx";
 
 import currencies from "../json/currency.json";
+import formatsMoney from "../json/formatMoney.json";
 
 const UserSettingPage = () => {
 	useChangeTitle("Настройки");
 	const navigate = useNavigate();
-	const currency = useCurrency();
+	const { currency, formatMoney } = useSelector(state => state.userSetting);
 
 	return <div className="page">
 		<div className="content">
-			<ValueLink title="Валюта:" value={`${currency.prefix} ${currency.suffix}`} onClick={() => navigate("/setting/currency")}/>
+			<ValueLink title="Валюта:" value={currency} onClick={() => navigate("/setting/currency")}/>
+			<ValueLink title="Денежный формат:" value={formatMoney.name} onClick={() => navigate("/setting/formatMoney")}/>
 		</div>
 	</div>
 };
@@ -30,7 +32,7 @@ const UserSettingPage = () => {
 const UserSettingCurrencyPage = () => {
 	const dispatch = useDispatch();
 	useChangeTitle("Валюта");
-	const currency = useCurrency();
+	const { currency } = useSelector(state => state.userSetting);
 
 	return <div className="page">
 		<div className="content">
@@ -38,7 +40,27 @@ const UserSettingCurrencyPage = () => {
 				<Text>Валюты:</Text>
 				{
 					currencies.map((curr, i) => {
-						return <Radio key={i} title={`${curr.name} (${curr.prefix}${curr.suffix})`} value={`${curr.prefix}${curr.suffix}`} checked={(curr.prefix + curr.suffix) === (currency.prefix + currency.suffix)} onChange={() => {dispatch(changeCurrency({prefix: curr.prefix, suffix: curr.suffix}))}}/>
+						return <Radio key={i} title={`${curr.name} (${curr.currency})`} value={curr.currency} checked={curr.currency === currency} onChange={() => {dispatch(changeCurrency(curr.currency))}}/>
+					})
+				}
+			</Card>
+		</div>
+	</div>
+};
+
+const UserSettingFormatMoneyPage = () => {
+	const dispatch = useDispatch();
+	useChangeTitle("Денежный формат");
+	const { name } = useSelector(state => state.userSetting.formatMoney);
+	const { currency } = useSelector(state => state.userSetting);
+
+	return <div className="page">
+		<div className="content">
+			<Card>
+				<Text>Денежные форматы: </Text>
+				{
+					formatsMoney.map((form, i) => {
+						return <Radio key={i} title={form.name} value={form.name} checked={form.name === name} onChange={() => dispatch(changeFormatMoney({name: form.name, integerSeparator: form.integerSeparator, decimal: form.decimal, prefix: form.prefix.replace("$c", currency), suffix: form.suffix.replace("$c", currency)}))}/>
 					})
 				}
 			</Card>
@@ -49,4 +71,5 @@ const UserSettingCurrencyPage = () => {
 export {
 	UserSettingPage,
 	UserSettingCurrencyPage,
+	UserSettingFormatMoneyPage,
 };

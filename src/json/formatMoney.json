@@ -1,0 +1,16 @@
+[
+	{
+		"name": "Русский формат",
+		"integerSeparator": " ",
+		"decimal": ",",
+		"prefix": "",
+		"suffix": " $c"
+	},
+	{
+		"name": "Американский формат",
+		"integerSeparator": ",",
+		"decimal": ".",
+		"prefix": "$c",
+		"suffix": ""
+	}
+]
