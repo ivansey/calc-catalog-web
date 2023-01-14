@@ -25,7 +25,7 @@ import { useTranslation } from "react-i18next";
 
 const MODULE_INFO = {
 	name: "calculationCredits",
-	version: "1.0.0a",
+	version: "1.1.0",
 	author: "IvanSEY",
 };
 

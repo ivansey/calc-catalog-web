@@ -1,6 +1,6 @@
 {
   "name": "calc-catalog-web",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Calc catalog web",
   "main": "index.js",
   "scripts": {
