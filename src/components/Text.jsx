@@ -18,8 +18,8 @@ If not, see <https://www.gnu.org/licenses/>.
 
 import React from "react";
 
-const Text = ({children, noBorderChild = false}) => {
-	return <div className={`card-item text ${noBorderChild ? "no-border-child" : null}`}>
+const Text = ({children, noBorderChild = false, onClick = () => {}}) => {
+	return <div className={`card-item text ${noBorderChild ? "no-border-child" : null}`} onClick={onClick}>
 		{children}
 	</div>
 };
