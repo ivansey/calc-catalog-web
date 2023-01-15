@@ -16,6 +16,7 @@ You should have received a copy of the GNU General Public License with this prog
 If not, see <https://www.gnu.org/licenses/>.
 */
 
+require("dotenv").config();
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -51,6 +52,9 @@ module.exports = {
 	devServer: {
 		hot: true,
 		historyApiFallback: true,
+		proxy: {
+			"/api": process.env.PROXY,
+		},
 	},
 
 	output: {
