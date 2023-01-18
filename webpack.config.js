@@ -53,7 +53,9 @@ module.exports = {
 		hot: true,
 		historyApiFallback: true,
 		proxy: {
-			"/api": process.env.PROXY,
+			"/api": {
+				target: "http://localhost:3000",
+			},
 		},
 	},
 
