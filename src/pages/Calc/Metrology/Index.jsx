@@ -22,18 +22,18 @@ import { useTranslation } from "react-i18next";
 import { useChangeTitle } from "../../../hooks/userSetting.js";
 import { Card, Link } from "../../../components/Index.jsx";
 
-const MetrologyTransportPage = () => {
+const MetrologyPage = () => {
 	const { t } = useTranslation();
 	const navigate = useNavigate();
-	useChangeTitle(t("transport"));
+	useChangeTitle(t("metrology"));
 
 	return <div className="page">
 		<div className="content">
 			<Card>
-				<Link onClick={() => navigate("/calc/metrology/transport/calculationFuelSpending")}>{t("calculationFuelSpending")}</Link>
+				<Link onClick={() => navigate("/calc/metrology/transport")}>{t("transport")}</Link>
 			</Card>
 		</div>
 	</div>
 };
 
-export default MetrologyTransportPage;
+export default MetrologyPage;

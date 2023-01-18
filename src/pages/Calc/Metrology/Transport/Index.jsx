@@ -19,21 +19,21 @@ If not, see <https://www.gnu.org/licenses/>.
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useChangeTitle } from "../../hooks/userSetting.js";
-import { Card, Link } from "../../components/Index.jsx";
+import { useChangeTitle } from "../../../../hooks/userSetting.js";
+import { Card, Link } from "../../../../components/Index.jsx";
 
-const MetrologyPage = () => {
+const MetrologyTransportPage = () => {
 	const { t } = useTranslation();
 	const navigate = useNavigate();
-	useChangeTitle(t("metrology"));
+	useChangeTitle(t("transport"));
 
 	return <div className="page">
 		<div className="content">
 			<Card>
-				<Link onClick={() => navigate("/calc/metrology/transport")}>{t("transport")}</Link>
+				<Link onClick={() => navigate("/calc/metrology/transport/calculationFuelSpending")}>{t("calculationFuelSpending")}</Link>
 			</Card>
 		</div>
 	</div>
 };
 
-export default MetrologyPage;
+export default MetrologyTransportPage;

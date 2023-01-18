@@ -3,5 +3,6 @@
 	"setting.json",
 	"currencies.json",
 	"moneyFormats.json",
-	"modules/finance/calculationCredits.json"
+	"modules/finance/calculationCredits.json",
+	"modules/metrology/transport/calculationFuelSpending.json"
 ]

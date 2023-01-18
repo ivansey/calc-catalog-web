@@ -10,5 +10,10 @@
 
 	"finance": "Финансы",
 	"physics": "Физика",
-	"computerScience": "Информатика"
+	"computerScience": "Информатика",
+	"metrology": "Метрология",
+	"transport": "Транспорт",
+
+	"ERROR": "ОШИБКА",
+	"emptyFieldPlsFill": "Пустое поле, пожалйста, заполните его"
 }

@@ -1,0 +1,19 @@
+{
+  "calculationFuelSpending": "Расчет расходов на топливо",
+  "firstCity": "Первый город",
+  "secondCity": "Второй город",
+  "fuelConsumption": "Расход топлива на 100 км",
+  "fuelPriceMin": "Цена топлива (мин.)",
+  "fuelPriceMax": "Цена топлива (макс.)",
+  "distance": "Расстояние",
+  "duration": "Время в пути",
+  "kilometers(short)": "км",
+  "hours(short)": "ч",
+  "fuelConsumptionSum": "Суммарный расход топлива",
+  "liters(short)": "л",
+  "fuelPriceSumMin": "Стоимость топлива (мин.)",
+  "fuelPriceSumMax": "Стоимость топлива (макс.)",
+
+  "calculate": "Рассчитать",
+  "loading...": "Загрузка..."
+}

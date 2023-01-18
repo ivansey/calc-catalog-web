@@ -10,5 +10,10 @@
 
 	"finance": "Finance",
 	"physics": "Physics",
-	"computerScience": "Computer science"
+	"computerScience": "Computer science",
+	"metrology": "Metrology",
+	"transport": "Transport",
+
+	"ERROR": "ERROR",
+	"emptyFieldPlsFill": "Empty field, please fill them in"
 }

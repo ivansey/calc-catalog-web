@@ -41,9 +41,9 @@ import CalcFinancePage from "./pages/Calc/Finance/Index.jsx";
 import CreditMortgagePage from "./pages/Calc/Finance/CreditMortgage/CreditMortgage.jsx";
 import CreditMortgageListPayPage from "./pages/Calc/Finance/CreditMortgage/CreditMortgageListPays.jsx";
 
-import MetrologyPage from "./pages/Metrology/Index.jsx";
-import MetrologyTransportPage from "./pages/Metrology/Transport/Index.jsx";
-import CalculationFuelSpendingPage from "./pages/Metrology/Transport/CalculationFuelSpending/Index.jsx";
+import MetrologyPage from "./pages/Calc/Metrology/Index.jsx";
+import MetrologyTransportPage from "./pages/Calc/Metrology/Transport/Index.jsx";
+import CalculationFuelSpendingPage from "./pages/Calc/Metrology/Transport/CalculationFuelSpending/Index.jsx";
 
 const router = createBrowserRouter([
 	{
