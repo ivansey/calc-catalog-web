@@ -1,5 +1,22 @@
 {
 	"ruRubleOld": "Российский рубль (стар.)",
 	"ruRuble": "Российский рубль",
-	"usDollar": "Америкаский доллар"
+	"usDollar": "Америкаский доллар",
+	"euro": "Евро",
+	"albanianLek": "Албанский лек",
+	"belorussianRuble": "Белорусский рубль",
+	"bolgarianLev": "Болгарский лев",
+	"convertibleMark": "Конвертируемая Марка",
+	"poundSterling": "Фунт стерлингов",
+	"forint": "Форинт",
+	"krona": "Крона",
+	"denar": "Денар",
+	"ley": "Лей",
+	"zloty": "Злотый",
+	"newLey": "Новый лей",
+	"dinar": "Динар",
+	"turkishLira": "Турецкая лира",
+	"grivna": "Гривна",
+	"horvatianKuna": "Хорватская куна",
+	"frank": "Франк"
 }

@@ -7,10 +7,7 @@
   "fuelPriceMax": "Цена топлива (макс.)",
   "distance": "Расстояние",
   "duration": "Время в пути",
-  "kilometers(short)": "км",
-  "hours(short)": "ч",
   "fuelConsumptionSum": "Суммарный расход топлива",
-  "liters(short)": "л",
   "fuelPriceSumMin": "Стоимость топлива (мин.)",
   "fuelPriceSumMax": "Стоимость топлива (макс.)",
 

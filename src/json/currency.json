@@ -10,5 +10,73 @@
 	{
 		"name": "usDollar",
 		"currency": "$"
+	},
+	{
+		"name": "euro",
+		"currency": "€"
+	},
+	{
+		"name": "albanianLek",
+		"currency": "L"
+	},
+	{
+		"name": "belorussianRuble",
+		"currency": "Br"
+	},
+	{
+		"name": "bolgarianLev",
+		"currency": "лв"
+	},
+	{
+		"name": "convertibleMark",
+		"currency": "KM"
+	},
+	{
+		"name": "poundSterling",
+		"currency": "£"
+	},
+	{
+		"name": "forint",
+		"currency": "Ft"
+	},
+	{
+		"name": "krona",
+		"currency": "Kr"
+	},
+	{
+		"name": "denar",
+		"currency": "ден"
+	},
+	{
+		"name": "ley",
+		"currency": "L"
+	},
+	{
+		"name": "zloty",
+		"currency": "zł"
+	},
+	{
+		"name": "newLey",
+		"currency": "L"
+	},
+	{
+		"name": "dinar",
+		"currency": "din"
+	},
+	{
+		"name": "turkishLira",
+		"currency": "¤"
+	},
+	{
+		"name": "grivna",
+		"currency": "₴"
+	},
+	{
+		"name": "horvatianKuna",
+		"currency": "kn"
+	},
+	{
+		"name": "frank",
+		"currency": "Fr"
 	}
 ]

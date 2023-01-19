@@ -7,10 +7,7 @@
   "fuelPriceMax": "Fuel price (max.)",
   "distance": "Distance",
   "duration": "Duration",
-  "kilometers(short)": "km",
-  "hours(short)": "h",
   "fuelConsumptionSum": "Fuel consumption sum",
-  "liters(short)": "l",
   "fuelPriceSumMin": "Fuel price sum (min.)",
   "fuelPriceSumMax": "Fuel price sum (max.)",
 
