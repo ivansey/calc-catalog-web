@@ -20,6 +20,8 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { ButtonMini } from "./Button.jsx";
+import Icon from "@mdi/react";
+import {mdiChevronLeft} from "@mdi/js";
 
 const Header = () => {
 	const location = useLocation();
@@ -38,7 +40,7 @@ const Header = () => {
 	return <div className="header">
 		{
 			isBackButtonEnable
-				? <ButtonMini type="transparent" onClick={() => navigate(-1)}>{"<"}</ButtonMini>
+				? <ButtonMini type="transparent" onClick={() => navigate(-1)}><Icon path={mdiChevronLeft} size={1}/></ButtonMini>
 				: <ButtonMini type="transparent"></ButtonMini>
 		}
 		<p className="header-title">{title}</p>
