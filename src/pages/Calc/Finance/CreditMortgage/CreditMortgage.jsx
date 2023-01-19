@@ -22,6 +22,8 @@ import {useChangeTitle, useCurrency} from "../../../../hooks/userSetting.js";
 import {Card, Text, Input, Value, Radio, Link} from "../../../../components/Index.jsx";
 import format from "format-number";
 import {useTranslation} from "react-i18next";
+import {mdiTable} from "@mdi/js";
+import {InformationModuleButton} from "../../../../components/page/Buttons.jsx";
 
 const MODULE_INFO = {
     name: "calculationCredits",
@@ -95,7 +97,7 @@ const CreditMortgagePage = () => {
                     sumRate = (sumRate - payRate).toFixed(2);
                     pay = Number(payRate) + Number(payPrimary);
                     sumAll = (sumAll - pay).toFixed(2);
-                    let s = (Number(sumPrimary) + Number(sumRate)).toFixed(2);
+                    // let s = (Number(sumPrimary) + Number(sumRate)).toFixed(2);
                     array.push({
                         month: i,
                         monthlyPayment: pay.toFixed(2),
@@ -158,13 +160,13 @@ const CreditMortgagePage = () => {
             }
             {
                 arrayPays.length !== 0
-                    ? <Card><Link
-                        onClick={() => navigate("/calc/finance/creditMortgage/listPays", {state: {arrayPays: arrayPays}})}>{t("listOfPaymentsByMonth")}</Link></Card>
+                    ? <Card>
+                        <Link icon={mdiTable} next
+                            onClick={() => navigate("/calc/finance/creditMortgage/listPays", {state: {arrayPays: arrayPays}})}>{t("listOfPaymentsByMonth")}</Link>
+                    </Card>
                     : null
             }
-            <Card>
-                <Link onClick={() => navigate("/about/module", {state: MODULE_INFO})}>{t("aboutModule")}</Link>
-            </Card>
+            <InformationModuleButton MODULE_INFO={MODULE_INFO}/>
         </div>
     </div>
 };

@@ -17,23 +17,26 @@ If not, see <https://www.gnu.org/licenses/>.
 */
 
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { useChangeTitle } from "../../../../hooks/userSetting.js";
-import { Card, Link } from "../../../../components/Index.jsx";
+import {useNavigate} from "react-router-dom";
+import {useTranslation} from "react-i18next";
+import {useChangeTitle} from "../../../../hooks/userSetting.js";
+import {Card, Link} from "../../../../components/Index.jsx";
+import {mdiGasStation} from "@mdi/js";
 
 const MetrologyTransportPage = () => {
-	const { t } = useTranslation();
-	const navigate = useNavigate();
-	useChangeTitle(t("transport"));
+    const {t} = useTranslation();
+    const navigate = useNavigate();
+    useChangeTitle(t("transport"));
 
-	return <div className="page">
-		<div className="content">
-			<Card>
-				<Link onClick={() => navigate("/calc/metrology/transport/calculationFuelSpending")}>{t("calculationFuelSpending")}</Link>
-			</Card>
-		</div>
-	</div>
+    return <div className="page">
+        <div className="content">
+            <Card>
+                <Link icon={mdiGasStation} next onClick={() => navigate("/calc/metrology/transport/calculationFuelSpending")}>
+					{t("calculationFuelSpending")}
+                </Link>
+            </Card>
+        </div>
+    </div>
 };
 
 export default MetrologyTransportPage;

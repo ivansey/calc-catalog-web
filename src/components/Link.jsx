@@ -17,9 +17,31 @@ If not, see <https://www.gnu.org/licenses/>.
 */
 
 import React from "react";
+import Icon from "@mdi/react";
+import {mdiChevronRight} from "@mdi/js";
+import {SpinnerCircularFixed} from "spinners-react";
 
-const Link = ({children, onClick = () => {}, noBorderChild = false}) => {
-	return <button className={`card-item button ${noBorderChild ? "no-border-child" : null}`} onClick={onClick}>{children}</button>
+const Link = ({children, onClick = () => {}, noBorderChild = false, icon = null, next, loading}) => {
+    return <button className={`card-item button ${noBorderChild ? "no-border-child" : null}`} onClick={onClick}>
+        <div className="left">
+			{
+			    icon && !loading
+                    ? <Icon path={icon} size={1}/>
+                    : null
+            }
+            {
+                loading
+                    ? <span className="loading"><SpinnerCircularFixed color="#000" size={20}/></span>
+                    : null
+            }
+            {children}
+        </div>
+		{
+			next
+				? <Icon path={mdiChevronRight} size={1}/>
+				: null
+		}
+    </button>
 };
 
 export default Link;

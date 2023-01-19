@@ -33,6 +33,9 @@
     "webpack-dev-server": "^4.11.1"
   },
   "dependencies": {
+    "@mdi/font": "^7.1.96",
+    "@mdi/js": "^7.1.96",
+    "@mdi/react": "^1.6.1",
     "@reduxjs/toolkit": "^1.9.1",
     "axios": "^1.2.2",
     "dotenv": "^16.0.3",
@@ -44,6 +47,7 @@
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.6.1",
     "redux": "^4.2.0",
-    "roboto-fontface": "^0.10.0"
+    "roboto-fontface": "^0.10.0",
+    "spinners-react": "^1.0.7"
   }
 }

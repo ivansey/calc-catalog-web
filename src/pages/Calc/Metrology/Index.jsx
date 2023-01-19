@@ -17,23 +17,26 @@ If not, see <https://www.gnu.org/licenses/>.
 */
 
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { useTranslation } from "react-i18next";
-import { useChangeTitle } from "../../../hooks/userSetting.js";
-import { Card, Link } from "../../../components/Index.jsx";
+import {useNavigate} from "react-router-dom";
+import {useTranslation} from "react-i18next";
+import {useChangeTitle} from "../../../hooks/userSetting.js";
+import {Card, Link} from "../../../components/Index.jsx";
+import {mdiTrainCar} from "@mdi/js";
 
 const MetrologyPage = () => {
-	const { t } = useTranslation();
-	const navigate = useNavigate();
-	useChangeTitle(t("metrology"));
+    const {t} = useTranslation();
+    const navigate = useNavigate();
+    useChangeTitle(t("metrology"));
 
-	return <div className="page">
-		<div className="content">
-			<Card>
-				<Link onClick={() => navigate("/calc/metrology/transport")}>{t("transport")}</Link>
-			</Card>
-		</div>
-	</div>
+    return <div className="page">
+        <div className="content">
+            <Card>
+                <Link icon={mdiTrainCar} next onClick={() => navigate("/calc/metrology/transport")}>
+					{t("transport")}
+                </Link>
+            </Card>
+        </div>
+    </div>
 };
 
 export default MetrologyPage;

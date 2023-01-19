@@ -18,12 +18,13 @@ If not, see <https://www.gnu.org/licenses/>.
 */
 
 import React, {useState} from "react";
-import {useNavigate} from "react-router-dom";
 import {useSelector} from "react-redux";
 import {useTranslation} from "react-i18next";
 import {useChangeTitle, useCurrency} from "../../../../../hooks/userSetting.js";
 import axios from "axios";
 import {Card, Link, Value, Input, Text} from "../../../../../components/Index.jsx";
+import {mdiSigma} from "@mdi/js";
+import {InformationModuleButton} from "../../../../../components/page/Buttons.jsx";
 
 const MODULE_INFO = {
     name: "calculationFuelSpending",
@@ -36,7 +37,6 @@ const MODULE_INFO = {
 
 const CalculationFuelSpending = () => {
     const {t} = useTranslation();
-    const navigate = useNavigate();
     useChangeTitle(t(MODULE_INFO.name));
     const {lang} = useSelector(state => state.userSetting);
     const currencyFormat = useCurrency();
@@ -91,8 +91,8 @@ const CalculationFuelSpending = () => {
             <Card>
                 {
                     response === "loading"
-                        ? <Link>{t("loading...")}</Link>
-                        : <Link onClick={calculate}>{t("calculate")}</Link>
+                        ? <Link loading>{t("loading...")}</Link>
+                        : <Link onClick={calculate} icon={mdiSigma}>{t("calculate")}</Link>
                 }
             </Card>
             {
@@ -116,9 +116,7 @@ const CalculationFuelSpending = () => {
                     </div>
                     : null
             }
-            <Card>
-                <Link onClick={() => navigate("/about/module", {state: MODULE_INFO})}>{t("aboutModule")}</Link>
-            </Card>
+            <InformationModuleButton MODULE_INFO={MODULE_INFO}/>
         </div>
     </div>
 };

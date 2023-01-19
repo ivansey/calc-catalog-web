@@ -21,6 +21,7 @@ import {useNavigate} from "react-router-dom";
 import {useChangeTitle} from "../hooks/userSetting.js";
 import {Card, Link} from "../components/Index.jsx";
 import {useTranslation} from "react-i18next";
+import {mdiFinance, mdiRulerSquareCompass, mdiCog, mdiInformationVariant} from "@mdi/js";
 
 const IndexPage = () => {
     const navigate = useNavigate();
@@ -30,12 +31,12 @@ const IndexPage = () => {
     return <div className="page">
         <div className="content">
             <Card>
-                <Link onClick={() => navigate("/calc/finance")}>{t("finance")}</Link>
-                <Link onClick={() => navigate("/calc/metrology")}>{t("metrology")}</Link>
+                <Link icon={mdiFinance} next onClick={() => navigate("/calc/finance")}>{t("finance")}</Link>
+                <Link icon={mdiRulerSquareCompass} next onClick={() => navigate("/calc/metrology")}>{t("metrology")}</Link>
             </Card>
             <Card>
-                <Link onClick={() => navigate("/setting")}>{t("setting")}</Link>
-                <Link onClick={() => navigate("/about")}>{t("aboutApp")}</Link>
+                <Link icon={mdiCog} next onClick={() => navigate("/setting")}>{t("setting")}</Link>
+                <Link icon={mdiInformationVariant} next onClick={() => navigate("/about")}>{t("aboutApp")}</Link>
             </Card>
         </div>
     </div>
