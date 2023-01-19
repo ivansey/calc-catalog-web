@@ -31,7 +31,7 @@ const AboutPage = () => {
 
     return <div className="page">
         <div className="content">
-            <Value title={t("version") + ":"} value="1.1.0"/>
+            <Value title={t("version") + ":"} value="1.2.0"/>
             <Card>
                 <Text>{t("authors")}:</Text>
                 {

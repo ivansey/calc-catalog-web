@@ -27,7 +27,7 @@ import {InformationModuleButton} from "../../../../components/page/Buttons.jsx";
 
 const MODULE_INFO = {
     name: "calculationCredits",
-    version: "1.1.0",
+    version: "1.1.1",
     authors: [
         "Ivan \"IvanSEY\" Panasyuk",
     ],

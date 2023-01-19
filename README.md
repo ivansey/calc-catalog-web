@@ -32,7 +32,8 @@ The project is available at [http://localhost:8080/](http://localhost:8080/)
 
 ### Modules
 
-* Calculation Credit 1.0.0a (Author: [Ivan "IvanSEY" Panasyuk](https://github.com/ivansey))
+* Calculation Credit 1.1.1 (Author: [Ivan "IvanSEY" Panasyuk](https://github.com/ivansey))
+* Calculation Fuel Spending 1.0.0 (Authors: [Ivan "IvanSEY" Panasyuk](https://github.com/ivansey); Alexandr Panasyuk)
 
 ### Members
 

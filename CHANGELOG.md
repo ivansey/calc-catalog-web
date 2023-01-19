@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.2.0 (2023-01-19)
+
+#### Release highlights
+
+* Add module "Calculation fuel spending"
+* Update module "Calculation credit" to 1.1.1
+* Add new currencies
+* Restyle components
+* Add icons
+* Fix bugs
+
 ## 1.1.0 (2023-01-14)
 
 #### Release highlights
@@ -9,7 +20,7 @@
 * Add money formats
 * Add save user setting in localStorage
 * Add UI components
-* Update "Calculation credit" to 1.1.0
+* Update module "Calculation credit" to 1.1.0
 * Fix bugs
 
 #### Features
