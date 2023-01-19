@@ -1,19 +1,18 @@
 {
-	"aboutApp": "About the application",
-	"aboutApp/title": "Information about {{app}}",
-	"aboutModule": "About the module",
-	"aboutModule/title": "Information about module",
-	"version": "Version",
-	"author": "Author",
-	"technologiesUsed": "Technologies used",
-	"nameModule": "Name module",
-
-	"finance": "Finance",
-	"physics": "Physics",
-	"computerScience": "Computer science",
-	"metrology": "Metrology",
-	"transport": "Transport",
-
-	"ERROR": "ERROR",
-	"emptyFieldPlsFill": "Empty field, please fill them in"
+  "aboutApp": "About the application",
+  "aboutApp/title": "Information about {{app}}",
+  "aboutModule": "About the module",
+  "aboutModule/title": "Information about module",
+  "version": "Version",
+  "author": "Author",
+  "authors": "Authors",
+  "technologiesUsed": "Technologies used",
+  "nameModule": "Name module",
+  "finance": "Finance",
+  "physics": "Physics",
+  "computerScience": "Computer science",
+  "metrology": "Metrology",
+  "transport": "Transport",
+  "ERROR": "ERROR",
+  "emptyFieldPlsFill": "Empty field, please fill them in"
 }

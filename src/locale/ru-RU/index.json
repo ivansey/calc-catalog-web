@@ -1,19 +1,18 @@
 {
-	"aboutApp": "О приложении",
-	"aboutApp/title": "Информация о {{app}}",
-	"aboutModule": "Информация о модуле",
-	"aboutModule/title": "Информация",
-	"nameModule": "Название модуля",
-	"version": "Версия",
-	"author": "Автор",
-	"technologiesUsed": "Используемые технологии",
-
-	"finance": "Финансы",
-	"physics": "Физика",
-	"computerScience": "Информатика",
-	"metrology": "Метрология",
-	"transport": "Транспорт",
-
-	"ERROR": "ОШИБКА",
-	"emptyFieldPlsFill": "Пустое поле, пожалйста, заполните его"
+  "aboutApp": "О приложении",
+  "aboutApp/title": "Информация о {{app}}",
+  "aboutModule": "Информация о модуле",
+  "aboutModule/title": "Информация",
+  "nameModule": "Название модуля",
+  "version": "Версия",
+  "author": "Автор",
+  "authors": "Авторы",
+  "technologiesUsed": "Используемые технологии",
+  "finance": "Финансы",
+  "physics": "Физика",
+  "computerScience": "Информатика",
+  "metrology": "Метрология",
+  "transport": "Транспорт",
+  "ERROR": "ОШИБКА",
+  "emptyFieldPlsFill": "Пустое поле, пожалйста, заполните его"
 }

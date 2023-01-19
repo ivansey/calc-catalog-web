@@ -27,7 +27,10 @@ import {Card, Link, Value, Input, Text} from "../../../../../components/Index.js
 
 const MODULE_INFO = {
     name: "calculationFuelSpending",
-    author: "IvanSEY",
+    authors: [
+        "Ivan \"IvanSEY\" Panasyuk",
+        "Alexandr Panasyuk",
+    ],
     version: "1.0.0",
 };
 

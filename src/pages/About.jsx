@@ -17,25 +17,36 @@ If not, see <https://www.gnu.org/licenses/>.
 */
 
 import React from "react";
-import { Value, Card, Text } from "../components/Index.jsx";
-import { useChangeTitle } from "../hooks/userSetting.js";
-import { useTranslation } from "react-i18next";
+import {Value, Card, Text} from "../components/Index.jsx";
+import {useChangeTitle} from "../hooks/userSetting.js";
+import {useTranslation} from "react-i18next";
+
+const authors = [
+    "Ivan \"IvanSEY\" Panasyuk",
+];
 
 const AboutPage = () => {
-	const { t } = useTranslation();
-	useChangeTitle(t("aboutApp/title", { app: "Calc Catalog Web" }));
+    const {t} = useTranslation();
+    useChangeTitle(t("aboutApp/title", {app: "Calc Catalog Web"}));
 
-	return <div className="page">
-		<div className="content">
-			<Value title={t("version") + ":"} value="1.1.0"/>
-			<Value title={t("author") + ":"} value="IvanSEY"/>
-			<Card>
-				<Text>{t("technologiesUsed") + ":"}</Text>
-				<Text>React (with hooks)</Text>
-				<Text>Redux</Text>
-			</Card>
-		</div>
-	</div>
+    return <div className="page">
+        <div className="content">
+            <Value title={t("version") + ":"} value="1.1.0"/>
+            <Card>
+                <Text>{t("authors")}:</Text>
+                {
+                    authors.map((author, i) => {
+                        return <Text key={i}>{author}</Text>
+                    })
+                }
+            </Card>
+            <Card>
+                <Text>{t("technologiesUsed") + ":"}</Text>
+                <Text>React (with hooks)</Text>
+                <Text>Redux</Text>
+            </Card>
+        </div>
+    </div>
 };
 
 export default AboutPage;
