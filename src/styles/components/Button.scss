@@ -34,20 +34,37 @@ If not, see <https://www.gnu.org/licenses/>.
 }
 
 .card-item.button {
+	background: transparent;
 	text-align: left;
 	font-size: 1em;
-	width: 100%;
-	padding-right: 20px;
+	width: calc(100% - 10px);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	transition: background-color .3s;
 
 	& .left {
 		display: flex;
 		align-items: center;
 
+		& .text {
+			padding-left: 5px;
+		}
+
 		& .loading {
 			margin: 2px 2px 2px 5px;
 		}
+	}
+
+	&:hover {
+		background-color: #ddd;
+	}
+}
+
+.valueLink {
+	transition: background-color .3s;
+
+	&:hover {
+		background-color: #ddd;
 	}
 }

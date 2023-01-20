@@ -22,10 +22,10 @@ import Text from "./Text.jsx";
 import Link from "./Link.jsx";
 
 const Value = ({title, value, onClick = () => {}}) => {
-	return <Card onClick={onClick}>
+	return <div onClick={onClick} className="card valueLink">
 		<Link noBorderChild onClick={onClick}>{title}</Link>
-		<Text onClick={onClick}>{value}</Text>
-	</Card>
+		<Link onClick={onClick}>{value}</Link>
+	</div>
 };
 
 export default Value;

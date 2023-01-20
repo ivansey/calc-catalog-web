@@ -34,7 +34,7 @@ const Link = ({children, onClick = () => {}, noBorderChild = false, icon = null,
                     ? <span className="loading"><SpinnerCircularFixed color="#000" size={20}/></span>
                     : null
             }
-            {children}
+            <div className="text">{children}</div>
         </div>
 		{
 			next

@@ -20,8 +20,9 @@ Node.js >= 18.2
 > git clone https://github.com/ivansey/calc-catalog-web
 > cd calc-catalog-web
 
-2. Install all dependencies^
+2. Install all dependencies
 > npm install
+
 or
 > yarn install
 

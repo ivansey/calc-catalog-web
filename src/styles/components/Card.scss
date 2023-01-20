@@ -17,24 +17,18 @@ If not, see <https://www.gnu.org/licenses/>.
 */
 .card {
 	margin-bottom: 10px;
+	background-color: #eee;
+	border-radius: 10px;
+	overflow: hidden;
+
 	& .card-item {
-		background-color: #eee;
-		width: calc(100% - 20px);
-		padding: 10px;
+		width: calc(100% - 10px);
+		margin: 5px;
+		padding: 5px;
 		border: 0;
-		border-bottom: 1px solid #999;
+		border-radius: 10px;
+		//border-bottom: 1px solid #999;
 		transition: background-color .3s;
-
-		&:first-child {
-			border-top-left-radius: 10px;
-			border-top-right-radius: 10px;	
-		}
-
-		&:last-child {
-			border-bottom-left-radius: 10px;
-			border-bottom-right-radius: 10px;
-			border-bottom: 0;
-		}
 
 		&.no-border-child {
 			border-bottom: 0;
