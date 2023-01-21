@@ -70,7 +70,7 @@ const CalculationFuelSpending = () => {
             setDistance((q.data.distance).toFixed(0));
             setDuration((q.data.duration / 60 / 60).toFixed(0));
 
-            const fuel = ((q.data.distance / 100).toFixed(2) * (fuelConsumption / 100).toFixed(2)).toFixed(2);
+            const fuel = ((q.data.distance / 1000).toFixed(2) * (fuelConsumption / 100).toFixed(2)).toFixed(2);
             setFuelConsumptionSum(fuel);
 
             setFuelPriceSumMin((fuel * fuelPriceMin).toFixed(2));
@@ -108,7 +108,7 @@ const CalculationFuelSpending = () => {
             {
                 response === "ok"
                     ? <div>
-                        <Value title={t("distance")} value={`${distance / 100} ${t("kilometers(short)")}`}/>
+                        <Value title={t("distance")} value={`${(distance / 1000).toFixed(2)} ${t("kilometers(short)")}`}/>
                         <Value title={t("duration")} value={`${duration} ${t("hours(short)")}`}/>
                         <Value title={t("fuelConsumptionSum")} value={`${fuelConsumptionSum} ${t("liters(short)")}`}/>
                         <Value title={t("fuelPriceSumMin")} value={currencyFormat(fuelPriceSumMin)}/>
