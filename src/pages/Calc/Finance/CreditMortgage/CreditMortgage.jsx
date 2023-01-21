@@ -31,6 +31,7 @@ const MODULE_INFO = {
     authors: [
         "Ivan \"IvanSEY\" Panasyuk",
     ],
+    license: "GPLv3",
 };
 
 const CreditMortgagePage = () => {

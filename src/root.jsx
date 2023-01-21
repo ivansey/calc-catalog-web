@@ -30,6 +30,7 @@ import AppPage from "./App.jsx";
 import IndexPage from "./pages/Index.jsx";
 import AboutPage from "./pages/About.jsx";
 import AboutModulePage from "./pages/AboutModule.jsx";
+import LicenseFilePage from "./pages/LicenseFile.jsx";
 import {
 	UserSettingPage,
 	UserSettingCurrencyPage,
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
 			{
 				path: "about/module",
 				element: <AboutModulePage/>,
+			},
+			{
+				path: "license",
+				element: <LicenseFilePage/>,
 			},
 			{
 				path: "setting",

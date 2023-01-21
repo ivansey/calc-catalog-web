@@ -33,6 +33,7 @@ const MODULE_INFO = {
         "Alexandr Panasyuk",
     ],
     version: "1.0.0",
+    license: "GPLv3",
 };
 
 const CalculationFuelSpending = () => {

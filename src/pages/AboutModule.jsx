@@ -18,14 +18,17 @@ If not, see <https://www.gnu.org/licenses/>.
 
 import React from "react";
 import {Value, Card, Text} from "../components/Index.jsx";
-import {useLocation} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import {useChangeTitle} from "../hooks/userSetting.js";
 import {useTranslation} from "react-i18next";
+import {Link} from "../components/Index.jsx";
+import {mdiFileDocument} from "@mdi/js";
 
 const AboutModulePage = () => {
     const {t} = useTranslation();
     const {state} = useLocation();
-    const {name, version, authors} = state;
+    const {name, version, authors, license} = state;
+    const navigate = useNavigate();
     useChangeTitle(t("aboutModule/title"));
 
     return <div className="page">
@@ -39,6 +42,10 @@ const AboutModulePage = () => {
                         return <Text key={i}>{author}</Text>
                     })
                 }
+            </Card>
+            <Value title={t("license") + ":"} value={license}/>
+            <Card>
+                <Link onClick={() => navigate("/license", {state: {license: license}})} next icon={mdiFileDocument}>{t("openLicenseFile")}</Link>
             </Card>
         </div>
     </div>

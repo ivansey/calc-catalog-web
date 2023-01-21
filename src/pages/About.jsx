@@ -17,9 +17,11 @@ If not, see <https://www.gnu.org/licenses/>.
 */
 
 import React from "react";
-import {Value, Card, Text} from "../components/Index.jsx";
+import {useNavigate} from "react-router-dom";
+import {Value, Card, Text, Link} from "../components/Index.jsx";
 import {useChangeTitle} from "../hooks/userSetting.js";
 import {useTranslation} from "react-i18next";
+import {mdiFileDocument} from "@mdi/js";
 
 const authors = [
     "Ivan \"IvanSEY\" Panasyuk",
@@ -27,6 +29,7 @@ const authors = [
 
 const AboutPage = () => {
     const {t} = useTranslation();
+    const navigate = useNavigate();
     useChangeTitle(t("aboutApp/title", {app: "Calc Catalog Web"}));
 
     return <div className="page">
@@ -44,6 +47,11 @@ const AboutPage = () => {
                 <Text>{t("technologiesUsed") + ":"}</Text>
                 <Text>React (with hooks)</Text>
                 <Text>Redux</Text>
+            </Card>
+            <Value title={t("license") + ":"} value="GPLv3"/>
+            <Card>
+                <Link onClick={() => navigate("/license", {state: {license: "GPLv3"}})} next
+                      icon={mdiFileDocument}>{t("openLicenseFile")}</Link>
             </Card>
         </div>
     </div>
